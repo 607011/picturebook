@@ -1,0 +1,118 @@
+@charset "utf-8"
+
+* {
+    margin: 0;
+    padding: 0;
+}
+
+html, body {
+    margin: 0;
+}
+
+body {
+    margin: 0;
+    background-color: Black;
+    color: White;
+    opacity: 0;
+    font-family: Verdana, Tahoma, Arial, Helvetica, sans-serif;
+    font-size: 12px;
+}
+
+body.loaded {
+    opacity: 1;
+    transition: opacity 0.5s ease;
+    -webkit-transition: opacity 0.5s ease;
+    -moz-transition: opacity 0.5s ease;
+    -o-transition: opacity 0.5s ease;
+}
+
+#menu {
+    position: fixed;
+    left: 0;
+    bottom: 0;
+    width: 100%;
+    padding: 2px;
+    background-color: White;
+    z-index: 1;
+    color: Black;
+}
+
+a { 
+    color: #ddd;
+}
+
+a:visited {
+    color: #ccc;
+}
+
+a:hover {
+    color: White;
+}
+
+#outer-container {
+    text-align: center;
+    padding: 10px 0;
+    margin: 10px auto;
+    -webkit-transform-style: preserve-3d;
+    -webkit-perspective: 3000px;
+    -webkit-perspective-origin: 50% top;
+}
+
+#presentation-container {
+    position: relative;
+    top: 90px;
+    -webkit-transform-style: preserve-3d;
+    z-index: 100;
+    cursor: pointer;
+}
+
+
+#picturebook-container {
+    position: relative;
+    top: 90px;
+    -webkit-animation-name: spinner;
+    -webkit-animation-timing-function: linear;
+    -webkit-animation-iteration-count: infinite;
+    -webkit-animation-duration: 10s;
+    -webkit-transform-style: preserve-3d;
+}
+
+#picturebook-container.large {
+    -webkit-animation-duration: 120s;
+    -webkit-animation-direction: reverse;
+}
+
+#picturebook-container:hover {
+    -webkit-animation-play-state: paused !important;
+}
+
+@-webkit-keyframes spinner {
+    from {
+        -webkit-transform: rotateY(0deg);
+    }
+    to {
+        -webkit-transform: rotateY(-360deg);
+    }
+}
+
+.picture {
+    position: absolute;
+    top: 0;
+    left: 50%;
+    display: inline-block;
+    cursor: pointer;
+    border-radius: 15px;
+    border: 2px solid #ccc;
+    width: 754px;
+    height: 480px;
+    background-color: White;
+    box-shadow: inset 0 0 25px rgba(0, 0, 0, 0.5);
+    background-size: cover, 100% 100%;
+    -webkit-transform-origin: 0 0 0;
+    -webkit-backface-visibility: visible;
+}
+
+#picturebook-container .picture:hover {
+    border: 2px solid White;
+    box-shadow: inset 0 0 25px rgba(255, 255, 255, 0.5);
+}

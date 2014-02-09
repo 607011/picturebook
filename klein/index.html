@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="de" dir="ltr">
+<head>
+<title>CSS-3D-Animationen: kleines Bilderbuch</title>
+<!--
+    Copyright (c) 2012 Oliver Lau <ola@ct.de>, Heise Zeitschriften Verlag.
+    Alle Rechte vorbehalten.
+    $Id$
+ -->
+<script charset="utf-8" type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/1.7.2/jquery.min.js"></script>
+<script charset="utf-8" type="text/javascript" src="js/picturebook.js"></script>
+<script type="text/javascript">
+$(document).ready(function() {
+  PictureBook.init();
+});
+</script>
+<style id="picture-presentation-data" type="text/css"></style>
+<style id="picture-data" type="text/css"></style>
+<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
+<meta http-equiv="content-language" content="de" />
+<meta http-equiv="content-type" content="text/html; charset=utf-8" />
+<link rel="stylesheet" media="screen" type="text/css" href="../picturebook.css" />
+<link rel="icon" type="image/gif" href="../favicon.gif">
+</head>
+<body>
+<div id="menu">
+  <button id="start-stop-button">Stop</button>
+  | Perspektive 
+  <input id="perspective-slider" type="range" min="10" max="20000" value="2900"/>
+</div>
+<div id="outer-container">
+  <div id="picturebook-container"></div>
+  <div id="presentation-container"></div>
+</div>
+</body>
+</html>
